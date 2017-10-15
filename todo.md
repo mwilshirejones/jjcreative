@@ -41,6 +41,8 @@
                    | homepage_feature √ |
                    +--------------------+
 
+    - STI:
+      - Create shared table, give it a `:type` column and rails will automagically do the things
 
 - Images model
 

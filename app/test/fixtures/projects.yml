@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
-  short_description: MyText
+  title: Title for First Project
+  description: Description for First Project
+  short_description: Short description for First Project
   homepage_feature: false
+  portfolio_id: 1
 
 two:
-  title: MyString
-  description: MyText
-  short_description: MyText
+  title: Title for First Project
+  description: Description for First Project
+  short_description: Short description for First Project
   homepage_feature: false
+  portfolio_id: 1

@@ -62,13 +62,18 @@ class PortfoliosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_portfolio
-      @portfolio = Portfolio.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def portfolio_params
-      params.fetch(:portfolio, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_portfolio
+    @portfolio = Portfolio.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet,
+  # only allow the white list through.
+  def portfolio_params
+    params.require(:portfolio).permit(
+      :title,
+      :nav_title
+    )
+  end
 end
