@@ -24,7 +24,7 @@
     - Controller action find all projects flagged `homepage_feature: true`, use their thumbnails in slideshow and link to projects
   - Portfolios
     - A portfolio `has many :projects`
-    - A project `belongs to :portfolio`
+    - A project `belongs to :portfolio` - polymorphic? not needed for this, for now a project should only belong to one portfolio
     - A project should use STI and have two sub classes: Motion and Stills
 
     +------------+ +--------------------+
@@ -32,8 +32,8 @@
     +------------+ +--------------------+
     | id         | | portfolio_id       |
     | title √    | | id                 |
-    +------------+ | title √            |
-                   | short_description √|
+    | nav_title √| | title √            |
+    +------------+ | short_description √|
                    | description √      |
                    | thumbnail          |
                    | video              | ----> for Motion class
