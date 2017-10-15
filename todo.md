@@ -27,20 +27,20 @@
     - A project `belongs to :portfolio`
     - A project should use STI and have two sub classes: Motion and Stills
 
-    +------------+ +------------------+
-    | portfolios | | projects         |
-    +------------+ +------------------+
-    | id         | | portfolio_id     |
-    | title      | | id               |
-    +------------+ | title            |
-                   | blurb            |
-                   | description      |
-                   | thumbnail        |
-                   | video            | ----> for Motion class
-                   | gallery          | ----> for Stills class
-                   | homepage_feature |
-                   +------------------+
-  
+    +------------+ +--------------------+
+    | portfolios | | projects           |
+    +------------+ +--------------------+
+    | id         | | portfolio_id       |
+    | title √    | | id                 |
+    +------------+ | title √            |
+                   | short_description √|
+                   | description √      |
+                   | thumbnail          |
+                   | video              | ----> for Motion class
+                   | gallery            | ----> for Stills class
+                   | homepage_feature √ |
+                   +--------------------+
+
 
 - Images model
 
