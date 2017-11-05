@@ -1,0 +1,19 @@
+h1 Listing motion_projects
+
+table
+  thead
+    tr
+      th
+      th
+      th
+
+  tbody
+    - @motion_projects.each do |motion_project|
+      tr
+        td = link_to 'Show', motion_project
+        td = link_to 'Edit', edit_motion_project_path(motion_project)
+        td = link_to 'Destroy', motion_project, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Motion project', new_motion_project_path

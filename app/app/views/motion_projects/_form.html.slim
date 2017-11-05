@@ -1,0 +1,9 @@
+= form_for @motion_project do |f|
+  - if @motion_project.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@motion_project.errors.count, "error")} prohibited this motion_project from being saved:"
+      ul
+        - @motion_project.errors.full_messages.each do |message|
+          li = message
+
+  .actions = f.submit
