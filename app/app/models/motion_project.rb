@@ -1,0 +1,2 @@
+class MotionProject < Project
+end

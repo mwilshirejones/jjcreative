@@ -1,4 +1,9 @@
-# Actual TODO:
+## TODO
+- STI:
+  - https://gist.github.com/ruckus/3124445
+- Project form, create association
+
+## OLD...Actual TODO:
 - Portfolio
   - Table
   - Model

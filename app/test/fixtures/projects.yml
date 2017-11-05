@@ -1,14 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+stills_project:
   title: Title for First Project
+  type: 'StillsProject'
   description: Description for First Project
   short_description: Short description for First Project
   homepage_feature: false
   portfolio_id: 1
 
-two:
+motion_project:
   title: Title for First Project
+  type: 'MotionProject'
   description: Description for First Project
   short_description: Short description for First Project
   homepage_feature: false

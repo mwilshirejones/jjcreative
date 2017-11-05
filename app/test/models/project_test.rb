@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ProjectTest < ActiveSupport::TestCase
   setup do
-    @project = projects(:one)
+    @project = projects(:stills_project)
   end
 
   test 'should be invalid without a title' do

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stills Projects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stills_projects.each do |stills_project| %>
+      <tr>
+        <td><%= link_to 'Show', stills_project %></td>
+        <td><%= link_to 'Edit', edit_stills_project_path(stills_project) %></td>
+        <td><%= link_to 'Destroy', stills_project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stills Project', new_stills_project_path %>
