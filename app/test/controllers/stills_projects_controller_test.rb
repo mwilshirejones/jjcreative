@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ProjectsControllerTest < ActionDispatch::IntegrationTest
+class StillsProjectsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @stills_project = projects(:stills_project)
   end
