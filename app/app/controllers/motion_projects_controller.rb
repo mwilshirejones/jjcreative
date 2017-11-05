@@ -28,7 +28,7 @@ class MotionProjectsController < ApplicationController
 
     respond_to do |format|
       if @motion_project.save
-        format.html { redirect_to @motion_project, notice: 'Motion project was successfully created.' }
+        format.html { redirect_to projects_url, notice: 'Motion project was successfully created.' }
         format.json { render :show, status: :created, location: @motion_project }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class MotionProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @motion_project.update(motion_project_params)
-        format.html { redirect_to @motion_project, notice: 'Motion project was successfully updated.' }
+        format.html { redirect_to projects_url, notice: 'Motion project was successfully updated.' }
         format.json { render :show, status: :ok, location: @motion_project }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class MotionProjectsController < ApplicationController
   def destroy
     @motion_project.destroy
     respond_to do |format|
-      format.html { redirect_to motion_projects_url, notice: 'Motion project was successfully destroyed.' }
+      format.html { redirect_to projects_url, notice: 'Motion project was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

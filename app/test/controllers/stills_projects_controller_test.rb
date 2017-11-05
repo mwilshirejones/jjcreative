@@ -23,7 +23,8 @@ class StillsProjectsControllerTest < ActionDispatch::IntegrationTest
           }
       }
     end
-    assert_redirected_to stills_project_url(StillsProject.last)
+
+    assert_redirected_to projects_url
   end
 
   test "should show project" do 
@@ -42,13 +43,15 @@ class StillsProjectsControllerTest < ActionDispatch::IntegrationTest
             title: 'New Title for Project'
         }
     }
-    assert_redirected_to stills_project_url(@stills_project)
+
+    assert_redirected_to projects_url
   end
 
   test "should destroy project" do
     assert_difference('StillsProject.count', -1) do
       delete stills_project_url(@stills_project)
     end
-    assert_redirected_to stills_projects_url
+
+    assert_redirected_to projects_url
   end
 end

@@ -28,7 +28,7 @@ class StillsProjectsController < ApplicationController
 
     respond_to do |format|
       if @stills_project.save
-        format.html { redirect_to @stills_project, notice: 'Stills project was successfully created.' }
+        format.html { redirect_to projects_url, notice: 'Stills project was successfully created.' }
         format.json { render :show, status: :created, location: @stills_project }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class StillsProjectsController < ApplicationController
   def update
     respond_to do |format|
       if @stills_project.update(stills_project_params)
-        format.html { redirect_to @stills_project, notice: 'Stills project was successfully updated.' }
+        format.html { redirect_to projects_url, notice: 'Stills project was successfully updated.' }
         format.json { render :show, status: :ok, location: @stills_project }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class StillsProjectsController < ApplicationController
   def destroy
     @stills_project.destroy
     respond_to do |format|
-      format.html { redirect_to stills_projects_url, notice: 'Stills project was successfully destroyed.' }
+      format.html { redirect_to projects_url, notice: 'Stills project was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

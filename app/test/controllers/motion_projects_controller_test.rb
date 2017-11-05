@@ -23,7 +23,8 @@ class MotionProjectsControllerTest < ActionDispatch::IntegrationTest
           }
       }
     end
-    assert_redirected_to motion_project_url(MotionProject.last)
+
+    assert_redirected_to projects_url
   end
 
   test "should show project" do 
@@ -42,13 +43,15 @@ class MotionProjectsControllerTest < ActionDispatch::IntegrationTest
             title: 'New Title for Project'
         }
     }
-    assert_redirected_to motion_project_url(@motion_project)
+
+    assert_redirected_to projects_url
   end
 
   test "should destroy project" do
     assert_difference('MotionProject.count', -1) do
       delete motion_project_url(@motion_project)
     end
-    assert_redirected_to motion_projects_url
+
+    assert_redirected_to projects_url
   end
 end
