@@ -20,12 +20,7 @@ class PortfoliosControllerTest < ActionDispatch::IntegrationTest
       post portfolios_url, params: { portfolio: { title: @portfolio.title } }
     end
 
-    assert_redirected_to portfolio_url(Portfolio.last)
-  end
-
-  test 'should show portfolio' do
-    get portfolio_url(@portfolio)
-    assert_response :success
+    assert_redirected_to portfolios_url
   end
 
   test 'should get edit' do
@@ -37,7 +32,7 @@ class PortfoliosControllerTest < ActionDispatch::IntegrationTest
     patch portfolio_url(@portfolio), params: { portfolio: {
       title: @portfolio.title
     } }
-    assert_redirected_to portfolio_url(@portfolio)
+    assert_redirected_to portfolios_url
   end
 
   test 'should destroy portfolio' do
