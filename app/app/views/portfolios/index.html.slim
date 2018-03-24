@@ -1,18 +1,21 @@
-h1 Listing portfolios
+h1 Listing Portfolios
 
 table
   thead
     tr
-      th
-      th
-      th
+      th Title
+      th Nav Title
+      th Actions
 
   tbody
     - @portfolios.each do |portfolio|
       tr
-        td = link_to 'Show', portfolio
-        td = link_to 'Edit', edit_portfolio_path(portfolio)
-        td = link_to 'Destroy', portfolio, data: { confirm: 'Are you sure?' }, method: :delete
+        td = portfolio.title
+        td = portfolio.nav_title
+        td 
+          = link_to 'Edit', edit_portfolio_path(portfolio)
+          '
+          = link_to 'Destroy', portfolio, data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 
