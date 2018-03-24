@@ -8,12 +8,12 @@ table
       th
 
   tbody
-    - @projects.each do |project|
+    - @projects.each do |project| 
       tr
-        td = link_to 'Show', project
-        td = link_to 'Edit', edit_project_path(project)
+        td = link_to 'Edit', find_project_edit_path(project)
         td = link_to 'Destroy', project, data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 
-= link_to 'New Project', new_project_path
+= link_to 'New Stills Project', new_stills_project_path
+= link_to 'New Motion Project', new_motion_project_path

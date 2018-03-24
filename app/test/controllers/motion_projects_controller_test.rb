@@ -5,11 +5,6 @@ class MotionProjectsControllerTest < ActionDispatch::IntegrationTest
     @motion_project = projects(:motion_project)
   end
 
-  test "should get index" do
-    get motion_projects_url
-    assert_response :success
-  end
-
   test "should get new" do
     get new_motion_project_url
     assert_response :success
@@ -25,11 +20,6 @@ class MotionProjectsControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to projects_url
-  end
-
-  test "should show project" do 
-    get motion_project_url(@motion_project)
-    assert_response :success
   end
 
   test "should get edit" do

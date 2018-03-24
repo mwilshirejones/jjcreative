@@ -5,11 +5,6 @@ class StillsProjectsControllerTest < ActionDispatch::IntegrationTest
     @stills_project = projects(:stills_project)
   end
 
-  test "should get index" do
-    get stills_projects_url
-    assert_response :success
-  end
-
   test "should get new" do
     get new_stills_project_url
     assert_response :success
@@ -26,12 +21,7 @@ class StillsProjectsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to projects_url
   end
-
-  test "should show project" do 
-    get stills_project_url(@stills_project)
-    assert_response :success
-  end
-
+  
   test "should get edit" do
     get edit_stills_project_url(@stills_project)
     assert_response :success
