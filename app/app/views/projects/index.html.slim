@@ -5,6 +5,7 @@ table
     tr
       th Title
       th Type
+      th Portfolio
       th Actions
 
   tbody
@@ -12,6 +13,7 @@ table
       tr
         td = project.title
         td = project.type.underscore.humanize
+        td = project.try(:portfolio).try(:title)
         td 
           = link_to 'Edit', find_project_edit_path(project)
           '
