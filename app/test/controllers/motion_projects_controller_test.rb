@@ -5,39 +5,39 @@ class MotionProjectsControllerTest < ActionDispatch::IntegrationTest
     @motion_project = projects(:motion_project)
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_motion_project_url
     assert_response :success
   end
 
-  test "should create project" do
+  test 'should create project' do
     assert_difference('MotionProject.count') do
       post motion_projects_url, params: { 
-          motion_project: {
-            title: 'A Motion Project'
-          }
+        motion_project: {
+          title: 'A Motion Project'
+        }
       }
     end
 
     assert_redirected_to projects_url
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_motion_project_url(@motion_project)
     assert_response :success
   end
 
-  test "should update project" do
+  test 'should update project' do
     patch motion_project_url(@motion_project), params: { 
-        motion_project: {
-            title: 'New Title for Project'
-        }
+      motion_project: {
+        title: 'New Title for Project'
+      }
     }
 
     assert_redirected_to projects_url
   end
 
-  test "should destroy project" do
+  test 'should destroy project' do
     assert_difference('MotionProject.count', -1) do
       delete motion_project_url(@motion_project)
     end

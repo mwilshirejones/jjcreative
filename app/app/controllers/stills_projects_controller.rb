@@ -1,16 +1,5 @@
 class StillsProjectsController < ApplicationController
-  before_action :set_stills_project, only: [:show, :edit, :update, :destroy]
-
-  # GET /stills_projects
-  # GET /stills_projects.json
-  def index
-    @stills_projects = StillsProject.all
-  end
-
-  # GET /stills_projects/1
-  # GET /stills_projects/1.json
-  def show
-  end
+  before_action :set_stills_project, only: [:edit, :update, :destroy]
 
   # GET /stills_projects/new
   def new
@@ -18,8 +7,7 @@ class StillsProjectsController < ApplicationController
   end
 
   # GET /stills_projects/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /stills_projects
   # POST /stills_projects.json
@@ -62,17 +50,19 @@ class StillsProjectsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_stills_project
-      @stills_project = StillsProject.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def stills_project_params
-      params.require(:stills_project).permit(
-        :title,
-        :description,
-        :short_description,
-        :homepage_feature)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_stills_project
+    @stills_project = StillsProject.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def stills_project_params
+    params.require(:stills_project).permit(
+      :title,
+      :description,
+      :short_description,
+      :homepage_feature
+    )
+  end
 end

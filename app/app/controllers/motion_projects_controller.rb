@@ -1,16 +1,5 @@
 class MotionProjectsController < ApplicationController
-  before_action :set_motion_project, only: [:show, :edit, :update, :destroy]
-
-  # GET /motion_projects
-  # GET /motion_projects.json
-  def index
-    @motion_projects = MotionProject.all
-  end
-
-  # GET /motion_projects/1
-  # GET /motion_projects/1.json
-  def show
-  end
+  before_action :set_motion_project, only: [:edit, :update, :destroy]
 
   # GET /motion_projects/new
   def new
@@ -18,8 +7,7 @@ class MotionProjectsController < ApplicationController
   end
 
   # GET /motion_projects/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /motion_projects
   # POST /motion_projects.json
@@ -62,17 +50,18 @@ class MotionProjectsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_motion_project
-      @motion_project = MotionProject.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def motion_project_params
-      params.require(:motion_project).permit(
-        :title,
-        :description,
-        :short_description,
-        :homepage_feature)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_motion_project
+    @motion_project = MotionProject.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def motion_project_params
+    params.require(:motion_project).permit(
+      :title,
+      :description,
+      :short_description,
+      :homepage_feature)
+  end
 end
