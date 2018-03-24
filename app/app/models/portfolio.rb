@@ -3,6 +3,8 @@ class Portfolio < ApplicationRecord
 
   before_save :set_default_nav_title
 
+  after_commit :generate_static_page
+
   validates :title, presence: true
 
   def project_list
@@ -15,6 +17,10 @@ class Portfolio < ApplicationRecord
   end
 
   private
+
+  def generate_static_page
+    StaticPageService.new.generate_portfolio(title.parameterize)
+  end
 
   def set_default_nav_title
     self.nav_title = title if nav_title.blank?

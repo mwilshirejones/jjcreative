@@ -20,5 +20,8 @@
   .field
     = f.label :portfolio_id
     = f.collection_select :portfolio_id, Portfolio.all, :id, :title, include_blank: 'None'
+  .field
+    = f.label :slug
+    = f.text_field :slug
 
   .actions = f.submit

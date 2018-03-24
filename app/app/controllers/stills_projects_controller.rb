@@ -63,6 +63,7 @@ class StillsProjectsController < ApplicationController
       :description,
       :short_description,
       :homepage_feature,
+      :slug,
       :portfolio_id
     )
   end
