@@ -1,15 +1,10 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+  before_action :set_portfolio, only: [:edit, :update, :destroy]
 
   # GET /portfolios
   # GET /portfolios.json
   def index
     @portfolios = Portfolio.all
-  end
-
-  # GET /portfolios/1
-  # GET /portfolios/1.json
-  def show
   end
 
   # GET /portfolios/new
@@ -18,8 +13,7 @@ class PortfoliosController < ApplicationController
   end
 
   # GET /portfolios/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /portfolios
   # POST /portfolios.json
@@ -28,7 +22,7 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio.save
-        format.html { redirect_to @portfolio, notice: 'Portfolio was successfully created.' }
+        format.html { redirect_to portfolios_url, notice: 'Portfolio was successfully created.' }
         format.json { render :show, status: :created, location: @portfolio }
       else
         format.html { render :new }
@@ -42,7 +36,7 @@ class PortfoliosController < ApplicationController
   def update
     respond_to do |format|
       if @portfolio.update(portfolio_params)
-        format.html { redirect_to @portfolio, notice: 'Portfolio was successfully updated.' }
+        format.html { redirect_to portfolios_url, notice: 'Portfolio was successfully updated.' }
         format.json { render :show, status: :ok, location: @portfolio }
       else
         format.html { render :edit }
@@ -73,7 +67,8 @@ class PortfoliosController < ApplicationController
   def portfolio_params
     params.require(:portfolio).permit(
       :title,
-      :nav_title
+      :nav_title,
+      project_ids: []
     )
   end
 end

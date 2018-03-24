@@ -1,6 +1,8 @@
 class Portfolio < ApplicationRecord
   has_many :projects
 
+  # accepts_nested_attributes_for :projects
+
   before_save :set_default_nav_title
 
   validates :title, presence: true
