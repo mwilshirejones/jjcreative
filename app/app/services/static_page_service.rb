@@ -12,6 +12,8 @@ class StaticPageService
     # Create portfolio folder
     generate_directory(portfolio_name)
 
+    # TODO: Render portfolio cell here and pass to generate_file
+
     # Create index file and add content
     generate_file(portfolio_name, INDEX_FILE, "<h1>Portfolio #{portfolio_name}</h1>")
   end
@@ -21,6 +23,8 @@ class StaticPageService
 
     # Create portfolio folder incase it doesn't already exist
     generate_directory(portfolio_name)
+
+    # TODO: Render project cell here and pass to generate_file
 
     # Create file and add content
     generate_file(portfolio_name, project_name, "<h1>Project #{project_name}</h1>")
