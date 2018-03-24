@@ -12,7 +12,5 @@
   .field
     = f.label :nav_title
     = f.text_field :nav_title
-  .field
-    = f.collection_select :project_ids, Project.all, :id, :title, {}, multiple: true
 
   .actions = f.submit

@@ -67,8 +67,7 @@ class PortfoliosController < ApplicationController
   def portfolio_params
     params.require(:portfolio).permit(
       :title,
-      :nav_title,
-      project_ids: []
+      :nav_title
     )
   end
 end

@@ -62,6 +62,7 @@ class MotionProjectsController < ApplicationController
       :title,
       :description,
       :short_description,
-      :homepage_feature)
+      :homepage_feature
+    )
   end
 end
