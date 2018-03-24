@@ -12,7 +12,7 @@ class PortfolioTest < ActiveSupport::TestCase
   end
 
   test 'nav_title should equal title if blank' do
-    @portfolio.nav_title = nil
+    @portfolio.nav_title = ''
 
     # We need to save because fallbacks are set using
     # before_save callback.

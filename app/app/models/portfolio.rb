@@ -17,6 +17,6 @@ class Portfolio < ApplicationRecord
   private
 
   def set_default_nav_title
-    self.nav_title ||= title
+    self.nav_title = title if nav_title.blank?
   end
 end

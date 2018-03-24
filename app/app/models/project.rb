@@ -9,6 +9,6 @@ class Project < ApplicationRecord
   private
 
   def set_default_short_description
-    self.short_description ||= description
+    self.short_description = description if short_description.blank?
   end
 end

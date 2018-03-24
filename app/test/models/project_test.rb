@@ -11,7 +11,7 @@ class ProjectTest < ActiveSupport::TestCase
   end
 
   test 'short_description should equal description if blank' do
-    @project.short_description = nil
+    @project.short_description = ''
 
     # We need to save because fallbacks are set using
     # before_save callback.
