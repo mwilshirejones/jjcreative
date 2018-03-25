@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :images, except: [:show]
   resources :stills_projects, except: [:index, :show]
   resources :motion_projects, except: [:index, :show]
   
