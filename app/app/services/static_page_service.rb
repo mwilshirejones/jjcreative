@@ -18,8 +18,10 @@ class StaticPageService
     generate_file(portfolio_name, INDEX_FILE, "<h1>Portfolio #{portfolio_name}</h1>")
   end
 
-  def generate_project(portfolio_name, project_name)
-    return if portfolio_name.blank? || project_name.blank?
+  def generate_project(portfolio_name, project_name, project_html)
+    return if portfolio_name.blank? ||
+              project_name.blank? ||
+              project_html.blank?
 
     # Create portfolio folder incase it doesn't already exist
     generate_directory(portfolio_name)
@@ -27,7 +29,7 @@ class StaticPageService
     # TODO: Render project cell here and pass to generate_file
 
     # Create file and add content
-    generate_file(portfolio_name, project_name, "<h1>Project #{project_name}</h1>")
+    generate_file(portfolio_name, project_name, project_html)
   end
 
   private

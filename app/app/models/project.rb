@@ -16,7 +16,9 @@ class Project < ApplicationRecord
 
     StaticPageService.new.generate_project(
       portfolio.nav_title,
-      slug
+      slug,
+      # Should I be create a copy of self to pass here to the cell?
+      ProjectFrontEndCell.new(self).call
     )
   end
 
