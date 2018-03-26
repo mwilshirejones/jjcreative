@@ -17,3 +17,12 @@ motion_project:
   homepage_feature: false
   portfolio_id: 1
   slug: 'motio-slug1'
+
+stills_project_2:
+  title: Title for First Project
+  type: 'StillsProject'
+  description: Description for First Project
+  short_description: Short description for First Project
+  homepage_feature: false
+  portfolio_id: 1
+  slug: 'still-slug'
