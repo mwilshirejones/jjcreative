@@ -51,3 +51,10 @@ sudo apt-get install -y postgresql-9.5 libpq-dev
 sudo -u postgres createuser admin -s
 
 ```
+
+
+
+
+Additional shit...
+
+yarn: sudo apt-get update && sudo apt-get install yarn
