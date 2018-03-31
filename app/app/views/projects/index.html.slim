@@ -1,6 +1,6 @@
 h1 Listing Projects
 
-table
+table.table
   thead
     tr
       th Title
@@ -14,13 +14,13 @@ table
         td = project.title
         td = project.type.underscore.humanize
         td = project.try(:portfolio).try(:title)
-        td 
-          = link_to 'Edit', find_project_edit_path(project)
-          '
-          = link_to 'Destroy', project, data: { confirm: 'Are you sure?' }, method: :delete
+        td
+          .btn-group
+            = link_to 'Edit', find_project_edit_path(project), class: "btn btn-primary"
+            = link_to 'Destroy', project, data: { confirm: 'Are you sure?' }, method: :delete, class: "btn btn-danger"
 
 br
 
-= link_to 'New Stills Project', new_stills_project_path
+= link_to 'New Stills Project', new_stills_project_path, class: "btn btn-primary"
 '
-= link_to 'New Motion Project', new_motion_project_path
+= link_to 'New Motion Project', new_motion_project_path, class: "btn btn-primary"

@@ -1,6 +1,6 @@
 h1 Listing images
 
-table
+table.table
   thead
     tr
       th Thumbnail
@@ -13,10 +13,10 @@ table
         td TODO: Add thumbnail here for this image
         td = image.image_identifier
         td
-          = link_to 'Edit', edit_image_path(image)
-          '
-          = link_to 'Destroy', image, data: { confirm: 'Are you sure?' }, method: :delete
+          .btn-group
+            = link_to 'Edit', edit_image_path(image), class: "btn btn-primary"
+            = link_to 'Destroy', image, data: { confirm: 'Are you sure?' }, method: :delete, class: "btn btn-danger"
 
 br
 
-= link_to 'New Image', new_image_path
+= link_to 'New Image', new_image_path, class: "btn btn-primary"

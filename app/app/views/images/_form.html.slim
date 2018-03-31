@@ -6,11 +6,13 @@
         - @image.errors.full_messages.each do |message|
           li = message
 
-  .field
+  .form-group
     = f.label :image
       strong Upload a new image
       - if @image.image.present?
         = image_tag @image.image_url
-    = f.file_field :image
+    = f.file_field :image, class: "form-control"
 
-  .actions = f.submit
+  .actions.btn-group
+    = link_to 'Back', images_path, class: "btn btn-secondary"
+    = f.submit class: "btn btn-primary"

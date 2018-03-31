@@ -1,9 +1,16 @@
-nav
-  h1 JJ Creative
-  ul
-    li
-      = link_to 'Portfolios', portfolios_path
-    li
-      = link_to 'Projects', projects_path
-    li
-      = link_to 'Images', images_path
+.bg-dark
+  nav.navbar.navbar-expand-md.navbar-dark.container.justify-content-md-between
+    a.navbar-brand href="#" JJ Creative
+
+    button.navbar-toggler data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+      span.navbar-toggler-icon
+
+    #navbarNavAltMarkup.collapse.navbar-collapse
+      .navbar-nav.ml-auto
+        a.nav-item.nav-link href=portfolios_path Portfolios
+        a.nav-item.nav-link href=projects_path Projects
+        .nav-item.nav-dropdown
+          a#mediaNavbarDropdown.nav-link.dropdown-toggle href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" Media
+
+          .dropdown-menu.dropdown-menu--align-right aria-labelledby="mediaNavbarDropdown"
+            a.dropdown-item href=images_path Images

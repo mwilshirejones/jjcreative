@@ -1,6 +1,6 @@
 h1 Listing Portfolios
 
-table
+table.table
   thead
     tr
       th Title
@@ -12,11 +12,11 @@ table
       tr
         td = portfolio.title
         td = portfolio.nav_title
-        td 
-          = link_to 'Edit', edit_portfolio_path(portfolio)
-          '
-          = link_to 'Destroy', portfolio, data: { confirm: 'Are you sure?' }, method: :delete
+        td
+          .btn-group
+            = link_to 'Edit', edit_portfolio_path(portfolio), class: "btn btn-primary"
+            = link_to 'Destroy', portfolio, data: { confirm: 'Are you sure?' }, method: :delete, class: "btn btn-danger"
 
 br
 
-= link_to 'New Portfolio', new_portfolio_path
+= link_to 'New Portfolio', new_portfolio_path, class: "btn btn-primary"
