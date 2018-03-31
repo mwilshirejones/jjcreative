@@ -26,6 +26,6 @@
     = f.text_field :slug
   .field
     = f.label :images
-    = f.collection_select :image_ids, Image.all, :id, :id, {}, multiple: true, style: 'width: 100%;'
+    = f.collection_select :image_ids, Image.all, :id, :image_identifier, {}, multiple: true, style: 'width: 100%;'
 
   .actions = f.submit

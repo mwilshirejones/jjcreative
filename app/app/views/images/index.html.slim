@@ -4,12 +4,14 @@ table
   thead
     tr
       th Thumbnail
+      th File Name
       th Actions
 
   tbody
     - @images.each do |image|
       tr
         td TODO: Add thumbnail here for this image
+        td = image.image_identifier
         td
           = link_to 'Edit', edit_image_path(image)
           '
