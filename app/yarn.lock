@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+bootstrap-select@^1.13.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/bootstrap-select/-/bootstrap-select-1.13.0.tgz#f31d0a23fc6070fd5b17b841bf1ca115ce54775b"
+
 bootstrap@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0.tgz#ceb03842c145fcc1b9b4e15da2a05656ba68469a"
@@ -9,3 +13,7 @@ bootstrap@^4.0.0:
 jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+
+popper.js@^1.14.3:
+  version "1.14.3"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.3.tgz#1438f98d046acf7b4d78cd502bf418ac64d4f095"

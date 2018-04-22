@@ -26,7 +26,7 @@
     = f.text_field :slug, class: "form-control"
   .form-group
     = f.label :images
-    = f.collection_select :image_ids, Image.all, :id, :image_identifier, {}, multiple: true, class: "form-control"
+    = f.collection_select :image_ids, Image.all, :id, :image_identifier, {}, multiple: true, class: "form-control selectpicker"
 
   .actions.btn-group
     = link_to 'Back', projects_path, class: "btn btn-secondary"

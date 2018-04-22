@@ -12,6 +12,10 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//
+// Bootstrap and it's dependencies...
 //= require jquery/dist/jquery.min.js
-//= require bootstrap/dist/js/bootstrap.js
+//= require popper.js/dist/umd/popper.min.js
+//= require bootstrap/dist/js/bootstrap.min.js
+//= require bootstrap-select/dist/js/bootstrap-select.min.js
 //= require_tree .
