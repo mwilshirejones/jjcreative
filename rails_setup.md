@@ -14,6 +14,9 @@ sudo apt-get update
 
 sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs
 
+# Install yarn (not part of link instructions)
+sudo apt-get update && sudo apt-get install yarn
+
 # Install rbenv and then ruby-build...
 git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> $HOME/.bashrc
@@ -50,11 +53,19 @@ sudo apt-get install -y postgresql-9.5 libpq-dev
 
 sudo -u postgres createuser admin -s
 
+# set a password
+sudo -u postgres psql
+postgres=# \password admin
 ```
 
+Bundle install...
 
+Then setup project...
 
+```
+rails new app -d postgresql
+cd app
+rake db:create
+```
 
-Additional shit...
-
-yarn: sudo apt-get update && sudo apt-get install yarn
+then start! `rails server`
