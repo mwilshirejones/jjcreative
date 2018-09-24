@@ -61,7 +61,6 @@ class StillsProjectsController < ApplicationController
     params.require(:stills_project).permit(
       :title,
       :description,
-      :short_description,
       :homepage_feature,
       :slug,
       :portfolio_id,

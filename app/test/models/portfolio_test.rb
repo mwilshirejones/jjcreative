@@ -28,7 +28,7 @@ class PortfolioTest < ActiveSupport::TestCase
     assert_equal nav_title, @portfolio.nav_title
   end
 
-  test 'should list title and short_description of associated projects' do
+  test 'should list title of associated projects' do
     # @portfolio.project_list should return an array,
     # not a hash/nil etc.
     projects = @portfolio.project_list
@@ -39,7 +39,7 @@ class PortfolioTest < ActiveSupport::TestCase
     assert_instance_of Hash, first_project
 
     # Should have title and short_description in Hash
-    assert first_project.key?(:title) && first_project.key?(:short_description)
+    assert first_project.key?(:title)
   end
 
   # TODO: More for front end...will use cells!

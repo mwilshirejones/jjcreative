@@ -61,7 +61,6 @@ class MotionProjectsController < ApplicationController
     params.require(:motion_project).permit(
       :title,
       :description,
-      :short_description,
       :homepage_feature,
       :slug,
       :portfolio_id
