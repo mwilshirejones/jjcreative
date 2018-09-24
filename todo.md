@@ -1,4 +1,11 @@
-## TODO
+# TODO
+- Deleting pages must remove pre-rendered file
+- Preview would be nice
+- Markdown rendering for description
+- Short description should strip markdown when copying description
+- Admin
+
+## TODO (outdated)
 - STI:
   - https://gist.github.com/ruckus/3124445
 - Project form, create association
