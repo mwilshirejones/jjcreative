@@ -1,7 +1,6 @@
-# A class for writing static pages to the public directory.
-
 require 'fileutils'
 
+# A class for writing static pages to the public directory.
 class StaticPageService
   PUBLIC_DIR = 'public'.freeze
   INDEX_FILE = 'index'.freeze
