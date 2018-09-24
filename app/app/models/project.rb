@@ -6,8 +6,8 @@ class Project < ApplicationRecord
 
   before_save :set_default_short_description,
               :set_default_slug
-
-  after_commit :generate_static_page
+  after_save :generate_static_page
+  before_destroy :delete_static_page
 
   private
 
@@ -19,6 +19,15 @@ class Project < ApplicationRecord
       slug,
       # Should I be create a copy of self to pass here to the cell?
       ProjectFrontEndCell.new(self).call
+    )
+  end
+
+  def delete_static_page
+    return if portfolio.nil?
+
+    StaticPageService.new.delete_project(
+      portfolio.nav_title,
+      slug
     )
   end
 

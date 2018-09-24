@@ -1,3 +1,5 @@
+# TODO: This needs tests...
+
 require 'fileutils'
 
 # A class for writing static pages to the public directory.
@@ -31,6 +33,14 @@ class StaticPageService
     generate_file(portfolio_name, project_name, project_html)
   end
 
+  def delete_portfolio(portfolio_name)
+    delete_directory(portfolio_name)
+  end
+
+  def delete_project(portfolio_name, project_name)
+    delete_file(portfolio_name, project_name)
+  end
+
   private
 
   def generate_directory(dir_name)
@@ -52,5 +62,25 @@ class StaticPageService
     ].join('/') + '.html'
 
     File.write file_path, file_contents
+  end
+
+  def delete_directory(dir_name)
+    return if dir_name.blank?
+
+    dir_name = "#{PUBLIC_DIR}/#{dir_name.to_s.parameterize}"
+    FileUtils.remove_dir dir_name
+  end
+
+  def delete_file(dir_name, file_name)
+    return if dir_name.blank? ||
+              file_name.blank?
+
+    file_path = [
+      PUBLIC_DIR,
+      dir_name.to_s.parameterize,
+      file_name.to_s.parameterize
+    ].join('/') + '.html'
+
+    FileUtils.rm file_path
   end
 end
