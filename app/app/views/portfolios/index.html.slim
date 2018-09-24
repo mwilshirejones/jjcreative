@@ -14,9 +14,9 @@ table.table
         td = portfolio.nav_title
         td
           .btn-group
-            = link_to 'Edit', edit_portfolio_path(portfolio), class: "btn btn-primary"
-            = link_to 'Destroy', portfolio, data: { confirm: 'Are you sure?' }, method: :delete, class: "btn btn-danger"
+            = link_to 'Edit', edit_portfolio_path(portfolio), class: 'btn btn-primary'
+            = link_to 'Destroy', portfolio, data: { confirm: 'Are you sure? This will also unpublish any projects assigned to this portfolio (don\'t worry though, the projects won\'t be deleted so you can always publish them again under a different portfolio)' }, method: :delete, class: 'btn btn-danger'
 
 br
 
-= link_to 'New Portfolio', new_portfolio_path, class: "btn btn-primary"
+= link_to 'New Portfolio', new_portfolio_path, class: 'btn btn-primary'
