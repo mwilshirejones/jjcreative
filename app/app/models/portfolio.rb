@@ -10,8 +10,7 @@ class Portfolio < ApplicationRecord
   def project_list
     projects.map do |x|
       {
-        title: x.title,
-        short_description: x.short_description
+        title: x.title
       }
     end
   end
