@@ -81,6 +81,6 @@ class StaticPageService
       file_name.to_s.parameterize
     ].join('/') + '.html'
 
-    FileUtils.rm file_path
+    FileUtils.rm file_path, force: true
   end
 end
