@@ -145,3 +145,19 @@ tags
 
 todo.md
 rails_setup.md
+Vagrantfile
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# NPM / Yarn
+/node_modules
+/yarn-error.log
+
+# Ignore uploads and static pages (generated in dev)
+/public/uploads/*
+/public/motion/*
+/public/stills/*
