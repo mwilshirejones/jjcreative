@@ -1,8 +1,10 @@
 # TODO
-- Deleting pages must remove pre-rendered file
+- Markdown rendering for description √
+- Deleting pages must remove pre-rendered file √
+  - Show warning about 'un-publishing' its projects √
+- Short description should strip markdown when copying description or remove functionality? Remove! Remove short description it's not needed! √
+- Add video link field to projects(motion)
 - Preview would be nice
-- Markdown rendering for description
-- Short description should strip markdown when copying description
 - Admin
 
 ## TODO (outdated)
