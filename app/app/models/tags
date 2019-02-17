@@ -1,5 +1,0 @@
-!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
-MotionProject	/Users/matt/Documents/Matt/jjcreative/app/app/models/motion_project.rb	/^class MotionProject < Project$/;"	c	language:Ruby
-Project	/Users/matt/Documents/Matt/jjcreative/app/app/models/project.rb	/^class Project < ApplicationRecord$/;"	c	language:Ruby
-set_default_short_description	/Users/matt/Documents/Matt/jjcreative/app/app/models/project.rb	/^  def set_default_short_description$/;"	f	language:Ruby	class:Project
-StillsProject	/Users/matt/Documents/Matt/jjcreative/app/app/models/stills_project.rb	/^class StillsProject < Project$/;"	c	language:Ruby
