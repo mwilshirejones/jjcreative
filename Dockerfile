@@ -10,14 +10,22 @@ COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 
-COPY . /app
-
 # Node.js + Yarn
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get update -qq && apt-get install -y nodejs yarn
+# Create temp node_modules folder so host directory doens't 
+# override/remove while mounting. The docker-entrypoint.sh
+# script will then copy the temporary node modules into the
+# the app directory after volume is mounted.
+RUN mkdir /temp
+COPY package.json yarn.* /temp/
+WORKDIR /temp
 RUN yarn install
+
+WORKDIR /app
+COPY . /app
 
 COPY docker-entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/docker-entrypoint.sh
