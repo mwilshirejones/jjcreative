@@ -1,6 +1,15 @@
 A Static Site Generating CMS Thingy
 ====================================
 
+Table of contents
+-----------------
+
+* [A little context](#a-little-context)
+* [Getting up and running with Docker](#getting-up-and-running-with-docker)
+* [Running tests](#running-tests)
+
+## A little context
+
 This project is a longstanding WIP and will eventually replace a portfolio originally created for a friend about 3 years ago. The original project was managed through Wordpress with an angularjs front end. I've since decided to do away with Wordpress and ditch angularjs because, well, Wordpress and angularjs are definitely overkill for such a task. Instead Wordpress will be substituted with a CMS built with RoR that, as a replacement for a big front end framework, will generate static pages delivered by the server (probably NGINX).
 
 ## Getting up and running with [Docker](https://www.docker.com/)
@@ -31,6 +40,6 @@ This project is a longstanding WIP and will eventually replace a portfolio origi
 
 **Note:** Subsequent start ups will then *only* require **step 1**.
 
-## Running Test
+## Running test
 1. Open a bash shell inside the container by running `docker-compose exec app bash`
 2. Run `rake test` to run the test suite
