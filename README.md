@@ -28,3 +28,9 @@ This project is a longstanding WIP and will eventually replace a portfolio origi
 
 2. Now, in a new terminal, run `docker-compose run app rake db:create && docker-compose run app rake db:migrate` then wait for the migration to complete
 3. Head over to `localhost:3000/portfolios`
+
+**Note:** Subsequent start ups will then *only* require **step 1**.
+
+## Running Test
+1. Open a bash shell inside the container by running `docker-compose exec app bash`
+2. Run `rake test` to run the test suite
