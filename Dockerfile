@@ -1,4 +1,4 @@
-FROM ruby:2.4.0
+FROM ruby:2.4-stretch
 
 # TODO: Sift through this, probabaly don't need them all, e.g. sqlite as using pg.
 RUN apt-get update -qq && apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev apt-transport-https
